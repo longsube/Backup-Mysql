@@ -1,6 +1,4 @@
 #!/bin/bash
-mkdir /var/lib/backups
-mkdir /var/lib/backups/mysql
 backup_dir="/var/lib/backups/mysql"
 filename="${backup_dir}/mysql-`hostname`-`eval date +%Y%m%d-%H%M%S`.sql.gz"
 # Dump the entire MySQL database
