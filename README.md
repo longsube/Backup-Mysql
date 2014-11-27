@@ -17,6 +17,6 @@ Backup MySql
   
     crontab -e 
   
-  Nếu là lần đầu chạy lệnh crontab -e sẽ hiện ra mục để chọn chương trình mở file mậc định. Mình sử dụng nano để mở ứng dụng lên sẽ chọn là 2. 
+  Nếu là lần đầu chạy lệnh    crontab -e     sẽ hiện ra mục để chọn chương trình mở file mậc định. Mình sử dụng nano để mở ứng dụng lên sẽ chọn là 2. 
   
   B3: Sau khi thưc hiện c bước 2 ta 
