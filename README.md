@@ -35,7 +35,7 @@ Backup MySql
   
   B7: Thêm dòng sau vào file: 
   
-    * 0,13 * * * bash /root/backup.sh 
+    01 0,13 * * * bash /root/backup.sh 
     
   B8: Hoàn thành quá trình tạo file backup.
   
