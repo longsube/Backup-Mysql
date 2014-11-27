@@ -39,7 +39,7 @@ Backup MySql
     
   B8: Hoàn thành quá trình tạo file backup.
 
-# Recovery lại file backup
+# III. Recovery lại file backup
   
   B1: Sử dụng các file backup tạo trong thư mục 
 
