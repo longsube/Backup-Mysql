@@ -38,5 +38,20 @@ Backup MySql
     01 0,13 * * * bash /root/backup.sh 
     
   B8: Hoàn thành quá trình tạo file backup.
+
+# Recovery lại file backup
   
+  B1: Sử dụng các file backup tạo trong thư mục 
+
+     /var/lib/backups/mysql
+
+  B2: Các file trong thư mục này sẽ được nén trong định dạng là .gz. Thực thi lệnh sau: 
+  
+    gzip -d [tenfilebackup].sql.gz
+
+  B3: Sau khi hoàn thành quá trình giải nén ta thu được file sau [tenfilebackup].sql. Sử dụng file này để recovery. Thực thi lệnh sau để recovery.
+  
+    mysql -u username -p < [tenfilebackup].sql
+
+  B4: Mất một khoảng thời gian để recovery lại tùy thuộc vào dữ liệu của bạn.
   
