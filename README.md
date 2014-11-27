@@ -5,6 +5,7 @@ Backup MySql
 
 # I. Mục tiêu 
   Mục tiêu của bài viết lập lịch cho khoảng thời gian backup toàn bộ dữ liệu của Mysql. 
+  
   Thời gian lập lịch sẽ là trong 1 ngày cập nhật 2 lần vào lúc 13h và 24h. Trong thư mục chứa file backup chỉ tồn tại 7 backup mới nhất.
 
 # II. Các bước thực hiện
