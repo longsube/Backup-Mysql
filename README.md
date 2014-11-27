@@ -6,7 +6,7 @@ Backup MySql
 # I. Mục tiêu 
   Mục tiêu của bài viết lập lịch cho khoảng thời gian backup toàn bộ dữ liệu của Mysql. 
   
-  Thời gian lập lịch sẽ là trong 1 ngày cập nhật 2 lần vào lúc 13h và 24h. Trong thư mục chứa file backup chỉ tồn tại 7 backup mới nhất.
+  Thời gian lập lịch sẽ là trong 1 ngày cập nhật 2 lần vào lúc 12h và 0h. Trong thư mục chứa file backup chỉ tồn tại 7 backup mới nhất.
 
 # II. Các bước thực hiện
   B1: Tạo thư mục chứa file backup như đường dẫn sau: 
@@ -15,9 +15,9 @@ Backup MySql
   
   B2: Tải file shell backup theo đường link sau. Đặt file shell vào thư mục bạn lựa chọn ở đấy mình đặt trong thư mục /root. 
   
-    wget https://raw.githubusercontent.com/daokhactuan48/Backup/master/backup.sh
+    wget https://github.com/daokhactuan48/Backup-Mysql/blob/master/backupall.sh
   
-  B3: Chỉnh sửa trong file backup.sh sau tham số -p là password của Mysql của bạn.  
+  B3: Chỉnh sửa trong file backupall.sh sau tham số -p là password của Mysql của bạn.  
   
   B4: Cài đặt Cron trên Ubuntu: 
 
@@ -28,7 +28,7 @@ Backup MySql
   
     # crontab -e 
   
-  Nếu là lần đầu chạy lệnh    crontab -e sẽ hiện ra mục để chọn chương trình mở file mậc định. Mình sử dụng nano để mở ứng dụng lên sẽ chọn là 2. 
+  Nếu là lần đầu chạy lệnh crontab -e sẽ hiện ra mục để chọn chương trình mở file mậc định. Mình sử dụng nano để mở ứng dụng lên sẽ chọn là 2. 
   
   B6: Sau khi thưc hiện bước thứ 2 bạn sẽ đang ở trong 1 files như sau: 
   
@@ -36,7 +36,7 @@ Backup MySql
   
   B7: Thêm dòng sau vào file: 
   
-    0 0,13 * * * bash /root/backup.sh 
+    0 0,12 * * * bash /root/backupall.sh
     
   B8: Hoàn thành quá trình tạo file backup.
 
