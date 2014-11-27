@@ -10,16 +10,19 @@ filenameperformance_schema="${backup_dir}/mysql-performance_schema-`hostname`-`e
 filenamemysql="${backup_dir}/mysql-mysql-`hostname`-`eval date +%Y%m%d-%H%M%S`.sql.gz"
 # Dump the nova MySQL database
 mysqldump --opt -u root -p nova | gzip > $filenamenova
-# Dump the nova MySQL database
-mysqldump --opt -u root -p nova | gzip > $filenamenova
-# Dump the nova MySQL database
-mysqldump --opt -u root -p nova | gzip > $filenamenova
-# Dump the nova MySQL database
-mysqldump --opt -u root -p nova | gzip > $filenamenova
-# Dump the nova MySQL database
-mysqldump --opt -u root -p nova | gzip > $filenamenova
+# Dump the cinder MySQL database
+mysqldump --opt -u root -p cinder | gzip > $filenamecinder
+# Dump the glance MySQL database
+mysqldump --opt -u root -p glance | gzip > $filenameglance
+# Dump the keystone MySQL database
+mysqldump --opt -u root -p keystone | gzip > $filenamekeystone
+# Dump the neutron MySQL database
+mysqldump --opt -u root -p neutron | gzip > $filenameneutron
+# Dump the information_schema MySQL database
+mysqldump --opt -u root -p information_schema | gzip > $filenameinformation_schema
+# Dump the performance_schema MySQL database
+mysqldump --opt -u root -p performance_schema | gzip > $filenameperformance_schema
+# Dump the mysql MySQL database
+mysqldump --opt -u root -p mysql | gzip > $filenamemysql
 # Delete backups older than 7 days
 find $backup_dir -ctime 7 -type f -delete
-
-
-mysqldump --opt nova > nova.sql
