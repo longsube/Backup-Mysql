@@ -14,8 +14,9 @@ Backup MySql
     /var/lib/backups/mysql
   
   B2: Tải file shell backup theo đường link sau. Đặt file shell vào thư mục bạn lựa chọn ở đấy mình đặt trong thư mục /root. 
-  
-    wget https://github.com/daokhactuan48/Backup-Mysql/blob/master/backupall.sh
+
+    apt-get install git -y   
+    git clone https://github.com/daokhactuan48/Backup-Mysql.git
   
   B3: Tạo ra 1 file sau: 
   
