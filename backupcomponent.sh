@@ -9,20 +9,20 @@ filenameinformation_schema="${backup_dir}/mysql-information_schema-`hostname`-`e
 filenameperformance_schema="${backup_dir}/mysql-performance_schema-`hostname`-`eval date +%d%m%Y-%H%M%S`.sql.gz"
 filenamemysql="${backup_dir}/mysql-mysql-`hostname`-`eval date +%d%m%Y-%H%M%S`.sql.gz"
 # Dump the nova MySQL database
-mysqldump --opt -u root -pWelcome123 nova | gzip > $filenamenova
+mysqldump --opt -u root  nova | gzip > $filenamenova
 # Dump the cinder MySQL database
-mysqldump --opt -u root -pWelcome123 cinder | gzip > $filenamecinder
+mysqldump --opt -u root  cinder | gzip > $filenamecinder
 # Dump the glance MySQL database
-mysqldump --opt -u root -pWelcome123 glance | gzip > $filenameglance
+mysqldump --opt -u root  glance | gzip > $filenameglance
 # Dump the keystone MySQL database
-mysqldump --opt -u root -pWelcome123 keystone | gzip > $filenamekeystone
+mysqldump --opt -u root  keystone | gzip > $filenamekeystone
 # Dump the neutron MySQL database
-mysqldump --opt -u root -pWelcome123 neutron | gzip > $filenameneutron
+mysqldump --opt -u root  neutron | gzip > $filenameneutron
 # Dump the information_schema MySQL database
-mysqldump --opt -u root -pWelcome123 information_schema | gzip > $filenameinformation_schema
+mysqldump --opt -u root  information_schema | gzip > $filenameinformation_schema
 # Dump the performance_schema MySQL database
-mysqldump --opt -u root -pWelcome123 performance_schema | gzip > $filenameperformance_schema
+mysqldump --opt -u root  performance_schema | gzip > $filenameperformance_schema
 # Dump the mysql MySQL database
-mysqldump --opt -u root -pWelcome123 mysql | gzip > $filenamemysql
+mysqldump --opt -u root  mysql | gzip > $filenamemysql
 # Delete backups older than 7 days
 # find $backup_dir -ctime 7 -type f -delete
