@@ -17,28 +17,44 @@ Backup MySql
   
     wget https://github.com/daokhactuan48/Backup-Mysql/blob/master/backupall.sh
   
-  B3: Chỉnh sửa trong file backupall.sh sau tham số -p là password của Mysql của bạn.  
+  B3: Tạo ra 1 file sau: 
   
-  B4: Cài đặt Cron trên Ubuntu: 
+    vi ~/.my.cnf
+  
+  B4: Copy nội dung sau vào file .my.cnf và thay đổi user và password cho phù hợp, ở đây mình dùng uesr là root. 
+  
+    [mysqldump]
+    user = root 
+    password = secret
+
+  B5: Thay đổi quyền thành 600 để có tính bảo mật cao hơn.
+  
+    chmod 600 ~/.my.cnf
+
+  B7: Kiểm tra lại quyền của thư mục vừa tạo bằng lệnh sau: 
+  
+    # ls -la ~/.my.cnf
+
+  B8: Cài đặt Cron trên Ubuntu: 
 
     # apt-get updte 
     # apt-get install cron 
   
-  B5: Sau khi cài đặt chạy lệnh sau: 
+  B9: Sau khi cài đặt chạy lệnh sau: 
   
     # crontab -e 
   
   Nếu là lần đầu chạy lệnh crontab -e sẽ hiện ra mục để chọn chương trình mở file mậc định. Mình sử dụng nano để mở ứng dụng lên sẽ chọn là 2. 
   
-  B6: Sau khi thưc hiện bước thứ 2 bạn sẽ đang ở trong 1 files như sau: 
+  B10: Sau khi thưc hiện bước thứ 2 bạn sẽ đang ở trong 1 files như sau: 
   
   <img src=http://i.imgur.com/9Zxbipj.png width="60%" height="60%" border="1">
   
-  B7: Thêm dòng sau vào file: 
+  B11: Thêm dòng sau vào file: 
   
     0 0,12 * * * bash /root/backupall.sh
     
-  B8: Hoàn thành quá trình tạo file backup.
+  B12: Hoàn thành quá trình tạo file backup.
 
 # III. Recovery lại file backup
   
