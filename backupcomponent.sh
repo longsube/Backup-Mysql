@@ -25,4 +25,4 @@ mysqldump --opt -u root -pWelcome123 performance_schema | gzip > $filenameperfor
 # Dump the mysql MySQL database
 mysqldump --opt -u root -pWelcome123 mysql | gzip > $filenamemysql
 # Delete backups older than 7 days
-find $backup_dir -ctime 7 -type f -delete
+# find $backup_dir -ctime 7 -type f -delete
