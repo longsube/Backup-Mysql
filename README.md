@@ -26,7 +26,7 @@ Backup MySql
   
     [mysqldump]
     user = root 
-    password = secret
+    password = abaf687c5a5b6aa06b97
 
   B5: Thay đổi quyền thành 600 để có tính bảo mật cao hơn.
   
